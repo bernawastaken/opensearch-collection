@@ -1,20 +1,99 @@
+:root{
+    --color1: #77A1D3;
+    --color2: #79CBCA;
+    --color3: #E684AE;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-    background-color: white;
-    position: relative;
-    
+    top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
     width:100%;
-    margin-top: -10px;
     height: min-content;
+    background: linear-gradient(to right, var(--color1), var(--color2), var(--color3));
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
 }
 
-section{
-    position: unset;
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    color: white;
+}
+
+nav a, a:visited, a:active{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 #pagetitle{
-    
+    font-size: 2.5rem;
+    display: inline;
+}
+
+#subtitle{
+    display: flex;
+    text-align: right;
+}
+
+.plugins a{
+    width: 15rem;
+    align-self: center;
+    color: #0ea0ff;
+    text-decoration: none;
+    padding: .5rem 1.2rem ;
+    margin-bottom: 1rem;
+    margin-left: -28px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 2em;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #0ea0ff;
+    transition: olor .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.plugins a:hover{
+    color: white;
+    background-color: #0ea0ff;
+    border: 1px solid #0ea0ff;
+    text-decoration: none;
+}
+
+#pluginlist{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-left: #0984e3 solid 8px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#pluginlist ul{
+    list-style: none;
+}
+
+#main{
+    display: flex;
+    padding-top: 5.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#main #plugintitle{
+    margin-right: 8px;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
 }

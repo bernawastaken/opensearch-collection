@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-
-    <link rel="search" type="application/opensearchdescription+xml"
-      title="YouTube" href="https://raw.githubusercontent.com/bernawastaken/opensearch-collection/main/plugins/youtube.xml">
-    <link rel="search" type="application/opensearchdescription+xml"
-      title="Ecosia" href="https://raw.githubusercontent.com/bernawastaken/opensearch-collection/main/plugins/ecosia.xml">
-    <link rel="search" type="application/opensearchdescription+xml"
-      title="AlternativeTo" href="https://raw.githubusercontent.com/bernawastaken/opensearch-collection/main/plugins/alternativeto.xml">
-
     <meta charset="utf-8">
     <title>OpenSearch Collection</title>
-    <style>
-      body{
-        font-family: sans-serif;
-      }
-    </style>
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <h1>OpenSearch Collection</h1>
-    <h2>bernawastaken's OpenSearch Plugin Collection</h2>
-    <br><br><br>
 
-    <h1>Work In Progress</h1>
-    <h2>To be released soon</h2>
+  <body>
+      <header id="pageheader">
+          <nav>
+            <div id="pagetitle">OpenSearch Collection</div>
+            <div id="subtitle"><a href="https://github.com/bernawastaken">bernawastaken</a>'s OpenSearch Plugin Collection</div>
+          </nav>
+      </header>
+      <div id="main">
+        <div id="plugintitle">All Plugins</div>
+          <br>
+        <div id="pluginlist">
+            <ul class="plugins">
+                <li>
+                    <a role="button" href="plugins/youtube">YouTube</a>
+                </li>
+                <li>
+                    <a role="button" href="plugins/ecosia">Ecosia</a>
+                </li>
+                <li>
+                    <a role="button" href="plugins/alternativeto">AlternativeTo</a>
+                </li>
+            </ul>
+        </div>
+      </div>
+      <script src="assets/js/app.js"></script>
   </body>
 </html>
