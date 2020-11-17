@@ -7,6 +7,47 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="search" type="application/opensearchdescription+xml" title="AlternativeTo" href="alternativeto.xml">
     <link rel="shortcut icon" type="image/x-icon" href="https://www.alternativeto.net/favicon.ico" />
+    <style>
+      .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+
+      .active, .collapsible:hover {
+        background-color: #555;
+      }
+
+      .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #f1f1f1;
+      }
+
+      #main{
+        display: revert;
+      }
+
+      .ff{
+        display: inline-flex;
+      }
+      .step1, .step2, .step3{
+        padding-left: 90px;
+        padding-top: 10px;
+      }
+
+      .step1 p, .step2 p, .step3 p{
+        text-align: center;
+      }
+    </style>
   </head>
 
   <body>
@@ -17,8 +58,53 @@
     </nav>
   </header>
   <div id="main">
+
+    <!--  Chrome instructions currently WIP-->
+    <!--  todo  Add screenshots and step by step guide-->
+    <!--  <button type="button" class="collapsible">Installing on Chrome, Edge, Opera</button>-->
+    <!--  <div class="content">-->
+    <!--    <div class="ch guide">-->
+    <!--    </div>-->
+    <!--  </div>-->
+
+    <button type="button" class="collapsible">Installing on Firefox</button>
+    <div class="content">
+      <div class="ff guide">
+        <br>
+        <div class="step1">
+          <img src="../../assets/img/guide1.png" width="320"/>
+          <p>Click on the three buttons on the address bar</p>
+        </div>
+        <br>
+        <div class="step2">
+          <img src="../../assets/img/guide2.png" width="320"/>
+          <p>Press "Add Search Engine"</p>
+        </div>
+        <br>
+        <div class="step3">
+          <img src="../../assets/img/guide3.png" width="320"/>
+          <p>The search engine will be added</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="../../assets/js/app.js"></script>
+  <script>
+    let coll = document.getElementsByClassName("collapsible");
+    let i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
   </body>
 </html>
