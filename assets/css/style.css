@@ -30,15 +30,29 @@ nav{
     color: white;
 }
 
-nav a, a:visited, a:active{
+#subtitle a, a:visited, a:active{
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-#pagetitle{
+#subtitle a:hover{
+    color: #e6e6e6;
+    transition: 0.3s;
+}
+
+#pagetitle a, a:visited, a:active{
+    color: white;
+    text-decoration: none;
     font-size: 2.5rem;
     display: inline;
+    transition: 0.3s;
+}
+
+#pagetitle a:hover{
+    color: #e6e6e6;
+    transition: 0.3s;
 }
 
 #subtitle{
