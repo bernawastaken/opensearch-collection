@@ -111,3 +111,7 @@ nav{
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
 }
+
+.card{
+    width: 18rem;
+}
